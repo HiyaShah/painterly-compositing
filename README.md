@@ -4,14 +4,8 @@ A pastel-themed, browser-only playground inspired by **Brushing Up on Illuminati
 
 [Reference paper](https://research.pixar.com/docs/2026.SiggraphTalks.FRE.pdf) · [Project repository](https://github.com/HiyaShah/painterly-compositing)
 
-## Publish on GitHub Pages
+<img width="873" height="681" alt="Screenshot 2026-10-27 at 10 04 29 PM" src="https://github.com/user-attachments/assets/02d5dd21-d13f-4667-9c43-e0b92a74f86c" />
 
-1. Extract the ZIP and upload **all its contents to the root of this repository**. Keep `vendor/` and the JavaScript and CSS files beside `index.html`. Upload the files themselves, not the ZIP; do not paste them into the README.
-2. Open **Settings → Pages → Build and deployment**.
-3. Choose **Deploy from a branch**, select **main** and **/(root)**, and save.
-4. After GitHub finishes deployment, open **https://hiyashah.github.io/painterly-compositing/**.
-
-No build step, npm installation, server, API key, or external model is required. The 3D engine is included locally. All scenery and brush textures are generated in code. The site makes no runtime network requests beyond its own files.
 
 ## Try it
 
@@ -44,38 +38,4 @@ This demonstrates the paper’s central separation: **stable 3D placement, indep
 
 This demo substitutes procedural surface samples and baked lighting. It does **not** load deep EXRs, reconstruct occluded background surfaces, import USD, reproduce Nuke’s node system, or implement reflections. Coverage is a **frustum-only** approximation, not a visibility or occlusion test. Card transparency ordering is approximate, there is no production edge-matte system, and the meshes are static. Brush color comes from interpolated baked surface lighting, rather than a sampled graded image plate. There is no AI image generation or style-transfer model.
 
-No Disney or Pixar assets are included. This is an independent educational project, not an official Pixar implementation.
 
-## Run locally
-
-Serve the repository with any static HTTP server, for example:
-
-```sh
-python3 -m http.server 8000
-```
-
-Open `http://localhost:8000`. Opening `index.html` directly using `file://` will not work because browser modules require HTTP. WebGL is required.
-
-## Tests
-
-With Node.js 18 or later:
-
-```sh
-npm test
-```
-
-The tests check deterministic sample identity, barycentric placement and color interpolation, area-weighted density, preservation of attributes during coverage filtering, and camera-path continuity. Browser rendering should additionally be checked on the target device; the demo’s development environment did not have an available browser preview service.
-
-## Source map
-
-| File | Role |
-| --- | --- |
-| `index.html`, `style.css` | Responsive pastel interface |
-| `app.js` | Controls, camera playback, coverage, and rendering |
-| `scene.js` | Procedural scenery and baked lighting |
-| `brushes.js` | Brush masks and instanced card shaders |
-| `core.js` | Deterministic surface-sampling utilities |
-| `tests/` | Numerical tests |
-| `vendor/` | Three.js 0.170.0 and its MIT license |
-
-Three.js is distributed under its included MIT license. The remaining project source is also available under the MIT license in `LICENSE`.
