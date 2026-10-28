@@ -1,6 +1,6 @@
 # Stillwood · A painterly compositing playground
 
-A pastel-themed, browser-only playground inspired by **Brushing Up on Illumination: Temporal Coherence in Painterly Compositing in Disney and Pixar’s Hoppers**, by Greg Finch, Jon Reisch, Dan Enstrom, and Chia-Chi Hu (SIGGRAPH Talks 2026).
+playground inspired by **Brushing Up on Illumination: Temporal Coherence in Painterly Compositing in Disney and Pixar’s Hoppers**, by Greg Finch, Jon Reisch, Dan Enstrom, and Chia-Chi Hu (SIGGRAPH Talks 2026).
 
 [Reference paper](https://research.pixar.com/docs/2026.SiggraphTalks.FRE.pdf) · [Project repository](https://github.com/HiyaShah/painterly-compositing)
 
